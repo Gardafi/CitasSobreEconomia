@@ -1,1 +1,50 @@
-<h1>CitasSobreEcpnomia</h1>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas sobre Economía, Finanzas y Negocios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-chart-line"></i>
+            <h1>Cita del Día</h1>
+        </div>
+        <h2>Sabiduría sobre Economía, Finanzas y Negocios</h2>
+    </header>
+
+    <main>
+        <div class="quote-container">
+            <div class="quote-card">
+                <div class="quote-content">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p id="quote-text">Cargando cita...</p>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+                <div class="quote-author">
+                    <p id="quote-author">-</p>
+                </div>
+                <div class="quote-category">
+                    <span id="quote-category">Categoría</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="new-quote-btn" title="Nueva cita"><i class="fas fa-random"></i></button>
+                <button id="share-twitter-btn" title="Compartir en Twitter"><i class="fab fa-twitter"></i></button>
+                <button id="share-facebook-btn" title="Compartir en Facebook"><i class="fab fa-facebook-f"></i></button>
+                <button id="copy-btn" title="Copiar cita"><i class="fas fa-copy"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Citas de Economía, Finanzas y Negocios</p>
+        <p>Una nueva cita cada día para inspirar tu camino financiero</p>
+    </footer>
+
+    <script src="quotes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

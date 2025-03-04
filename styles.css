@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #f39c12;
+    --text-color: #333;
+    --light-color: #ecf0f1;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.quote-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+.quote-content {
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.quote-icon {
+    color: rgba(52, 152, 219, 0.2);
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+.fa-quote-left {
+    top: 0;
+    left: 0;
+}
+
+.fa-quote-right {
+    bottom: 0;
+    right: 0;
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.quote-author {
+    text-align: right;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+#quote-author {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.quote-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#quote-category {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+button i {
+    font-size: 1.2rem;
+}
+
+#new-quote-btn {
+    background-color: var(--accent-color);
+}
+
+#copy-btn.copied {
+    background-color: #27ae60;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    #quote-text {
+        font-size: 1.2rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        flex-wrap: wrap;
+    }
+}
+
